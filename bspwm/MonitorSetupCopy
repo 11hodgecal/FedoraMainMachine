@@ -1,0 +1,14 @@
+
+#Monitor Config
+if [[ $(xrandr -q | grep "HDMI-A-0 connected") ]]; then
+	xrandr --output HDMI-A-0 --mode 1920x1080 --rotate normal --output HDMI-A-0 --mode 1920x1080 --rotate normal --right-of DisplayPort-1
+	bspc monitor DisplayPort-1 -d 1 2 3 4 5 6
+	bspc monitor HDMI-A-0 -d 7 8
+fi
+
+#if i use it on a different computer the setup will work fine
+if [[ $(xrandr -q | grep "HDMI-A-0 disconnected") ]]; then
+        bspc monitor -d 1 2 3 4 5 6 7 8
+fi
+
+
