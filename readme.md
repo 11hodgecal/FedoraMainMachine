@@ -1,1 +1,1 @@
-This is the monitor configurations for my main machine to be copied into the main config files
+This is the monitor config for my main machine to be copied into the main dot files
